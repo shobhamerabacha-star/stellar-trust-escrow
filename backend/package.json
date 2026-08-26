@@ -5,9 +5,9 @@
   "type": "module",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon server.js",
-    "build": "echo 'No build step required for backend'",
-    "start": "node server.js",
+    "dev": "node init && nodemon server.js",
+    "build": "node init && echo 'No build step required for backend'",
+    "start": "node init && node server.js",
     "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --runInBand --passWithNoTests --forceExit",
     "test:chaos": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --runInBand --testPathPattern=tests/chaos --passWithNoTests",
     "lint": "eslint .",
